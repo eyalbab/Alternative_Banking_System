@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+
+<StackPane fx:id="depositPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="342.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <DialogPane fx:id="dialogPane">
+         <header>
+            <Label alignment="CENTER" text="Deposit" textAlignment="JUSTIFY">
+               <font>
+                  <Font size="40.0" />
+               </font>
+            </Label>
+         </header>
+         <content>
+            <AnchorPane fx:id="depositMenu" prefHeight="250.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="submitBtn" defaultButton="true" disable="true" graphicTextGap="10.0" layoutX="38.0" layoutY="213.0" mnemonicParsing="false" onAction="#OnSubmitDeposit" prefHeight="33.0" prefWidth="75.0" text="Submit" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="35.0" />
+                  <Button fx:id="cancelBtn" cancelButton="true" graphicTextGap="10.0" layoutX="179.0" layoutY="213.0" mnemonicParsing="false" onAction="#OnCancelDeposit" prefHeight="33.0" prefWidth="75.0" text="Cancel" AnchorPane.bottomAnchor="23.0" AnchorPane.rightAnchor="35.0" />
+                  <TextField fx:id="amountTF" alignment="CENTER" layoutX="69.0" layoutY="84.0" onKeyTyped="#OnTyped" promptText="Amount to add" />
+               </children>
+            </AnchorPane>
+         </content>
+      </DialogPane>
+   </children>
+</StackPane>

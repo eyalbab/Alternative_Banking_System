@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="newLoanPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="342.0" minWidth="288.0" prefHeight="342.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <DialogPane fx:id="dialogPane">
+         <header>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="289.0" text="New Loan" textAlignment="JUSTIFY">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </header>
+         <content>
+            <AnchorPane fx:id="depositMenu" maxHeight="290.0" maxWidth="290.0" minHeight="290.0" minWidth="290.0" prefHeight="290.0" prefWidth="290.0">
+               <children>
+                  <Button fx:id="submitBtn" defaultButton="true" graphicTextGap="10.0" layoutX="38.0" layoutY="213.0" mnemonicParsing="false" onAction="#OnSubmitNewLoan" prefHeight="33.0" prefWidth="75.0" text="Submit" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="25.0" />
+                  <Button fx:id="cancelBtn" cancelButton="true" graphicTextGap="10.0" layoutX="179.0" layoutY="213.0" mnemonicParsing="false" onAction="#OnCancelNewLoan" prefHeight="33.0" prefWidth="75.0" text="Cancel" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="25.0" />
+                  <TextField fx:id="loanNameTF" alignment="CENTER" layoutX="58.0" layoutY="9.0" onKeyTyped="#OnTyped" promptText="Loan name">
+                     <font>
+                        <Font size="14.0" />
+                     </font></TextField>
+                  <TextField fx:id="capitalTF" alignment="CENTER" layoutX="58.0" layoutY="54.0" onKeyTyped="#OnTyped" promptText="Capital">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="totalYazTF" alignment="CENTER" layoutX="40.0" layoutY="98.0" onKeyTyped="#OnTyped" prefHeight="30.0" prefWidth="106.0" promptText="Total Yaz Time" AnchorPane.leftAnchor="15.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="payRateTF" alignment="CENTER" layoutX="153.0" layoutY="98.0" onKeyTyped="#OnTyped" prefHeight="30.0" prefWidth="106.0" promptText="Pay Rate (Yaz)" AnchorPane.rightAnchor="15.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="interestTF" alignment="CENTER" layoutX="58.0" layoutY="139.0" onKeyTyped="#OnTyped" promptText="Interest (%)">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <ComboBox fx:id="nlCategoryCB" layoutX="70.0" layoutY="179.0" prefWidth="150.0" promptText="Category" />
+                  <Text fx:id="nlStatusText" fill="#dd0909" layoutX="20.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" />
+               </children>
+            </AnchorPane>
+         </content>
+      </DialogPane>
+   </children>
+</StackPane>

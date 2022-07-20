@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<TableView id="BorrowedTable" fx:id="lendedTable" maxHeight="240.0" maxWidth="470.0" minHeight="200.0" minWidth="450.0" prefHeight="220.0" prefWidth="460.0" styleClass="cust-table" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.lendedTable.LendedTableController">
+   <columns>
+      <TableColumn id="loanId" fx:id="lendedLoanId" prefWidth="72.0" text="Loan Id" />
+      <TableColumn id="loanCategory" fx:id="lendedLoanCategory" minWidth="5.0" prefWidth="86.0" text="Category" />
+      <TableColumn id="loanAmount" fx:id="lendedLoanAmount" minWidth="5.0" prefWidth="81.0" text="Amount" />
+      <TableColumn id="loanInterest" fx:id="lendedLoanInterest" minWidth="5.0" prefWidth="71.0" text="Interest" />
+      <TableColumn id="loanStatus" fx:id="lendedLoanStatus" minWidth="5.0" prefWidth="106.0" text="Status" />
+   </columns>
+</TableView>

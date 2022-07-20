@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane prefHeight="561.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.saleLoans.SaleLoansController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="30.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+   </rowConstraints>
+   <children>
+      <TableView id="BorrowedTable" fx:id="forSaleLoansTable" maxHeight="210.0" maxWidth="470.0" minHeight="200.0" minWidth="450.0" prefHeight="200.0" prefWidth="450.0" styleClass="cust-table" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="3" GridPane.valignment="TOP">
+         <columns>
+            <TableColumn id="loanId" fx:id="forSaleId" prefWidth="72.0" text="Loan Id" />
+            <TableColumn id="loanCategory" fx:id="forSaleCategory" minWidth="5.0" prefWidth="86.0" text="Category" />
+            <TableColumn id="loanAmount" fx:id="forSaleAmount" minWidth="5.0" prefWidth="81.0" text="Amount" />
+            <TableColumn id="loanInterest" fx:id="forSaleInterest" minWidth="5.0" prefWidth="71.0" text="Interest" />
+            <TableColumn id="loanStatus" fx:id="forSaleStatus" minWidth="5.0" prefWidth="106.0" text="Status" />
+         </columns>
+      </TableView>
+      <TableView id="BorrowedTable" fx:id="MyLendedLoansTable" maxHeight="392.0" maxWidth="470.0" minHeight="200.0" minWidth="450.0" prefHeight="392.0" prefWidth="450.0" styleClass="cust-table" GridPane.columnIndex="1" GridPane.rowIndex="6">
+         <columns>
+            <TableColumn id="loanId" fx:id="mySaleId" prefWidth="72.0" text="Loan Id" />
+            <TableColumn id="loanCategory" fx:id="mySaleCategory" minWidth="5.0" prefWidth="86.0" text="Category" />
+            <TableColumn id="loanAmount" fx:id="mySaleAmount" minWidth="5.0" prefWidth="81.0" text="Amount" />
+            <TableColumn id="loanInterest" fx:id="mySaleInterest" minWidth="5.0" prefWidth="71.0" text="Interest" />
+            <TableColumn id="loanStatus" fx:id="mySaleStatus" minWidth="5.0" prefWidth="106.0" text="Status" />
+         </columns>
+      </TableView>
+      <Label text="Up for Sale Loans" GridPane.columnIndex="2" GridPane.columnSpan="2">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label text="My Lended Loans" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.valignment="TOP">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Action Status: " GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Text>
+      <Button fx:id="offerLoanBtn" mnemonicParsing="false" onAction="#offerLoanForSale" prefHeight="31.0" prefWidth="132.0" text="Offer To Sell" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="15.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="buyLoanBtn" mnemonicParsing="false" onAction="#buyLoan" prefHeight="31.0" prefWidth="132.0" text="Buy Loan" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="9">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="15.0" />
+         </GridPane.margin>
+      </Button>
+      <Text fx:id="saleStatusLabel" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="6" GridPane.columnSpan="4" GridPane.rowIndex="9">
+         <GridPane.margin>
+            <Insets left="20.0" />
+         </GridPane.margin>
+      </Text>
+   </children>
+</GridPane>

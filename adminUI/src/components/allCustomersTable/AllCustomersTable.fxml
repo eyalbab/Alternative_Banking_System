@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<TableView fx:id="customerTable" prefHeight="245.0" prefWidth="800.0" styleClass="admin-table" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.allCustomersTable.AllCustomersTableController">
+   <columns>
+      <TableColumn id="custName" fx:id="custName" maxWidth="-1.0" minWidth="65.0" prefWidth="-1.0" text="Name" />
+      <TableColumn id="custBalance" fx:id="custBalance" maxWidth="-1.0" minWidth="65.0" prefWidth="-1.0" text="Balance" />
+      <TableColumn id="custBorrowed" fx:id="custBorrowed" maxWidth="500.0" minWidth="65.0" prefWidth="349.0" text="Borrowed">
+         <columns>
+            <TableColumn id="borrowedNew" fx:id="borrowedNew" maxWidth="-1.0" minWidth="50.0" prefWidth="-1.0" text="New" />
+            <TableColumn id="borrowedPending" fx:id="borrowedPending" maxWidth="-1.0" minWidth="70.0" prefWidth="-1.0" text="Pending" />
+            <TableColumn id="borrowedActive" fx:id="borrowedActive" maxWidth="-1.0" minWidth="60.0" prefWidth="-1.0" text="Active" />
+            <TableColumn id="borrowedRisk" fx:id="borrowedRisk" maxWidth="-1.0" minWidth="50.0" prefWidth="-1.0" text="Risk" />
+            <TableColumn id="borrowedFinished" fx:id="borrowedFinished" maxWidth="-1.0" minWidth="70.0" prefWidth="-1.0" text="Finished" />
+         </columns>
+      </TableColumn>
+      <TableColumn id="custLended" fx:id="custLended" maxWidth="362.0" minWidth="52.0" prefWidth="251.0" text="Lended">
+         <columns>
+            <TableColumn id="lendedNew" fx:id="lendedNew" maxWidth="-1.0" minWidth="50.0" prefWidth="-1.0" text="New" />
+            <TableColumn id="lendedPending" fx:id="lendedPending" maxWidth="-1.0" minWidth="70.0" prefWidth="-1.0" text="Pending" />
+            <TableColumn id="lendedActive" fx:id="lendedActive" maxWidth="-1.0" minWidth="60.0" prefWidth="-1.0" text="Active" />
+            <TableColumn id="lendedRisk" fx:id="lendedRisk" maxWidth="-1.0" minWidth="50.0" prefWidth="-1.0" text="Risk" />
+            <TableColumn id="lendedFinished" fx:id="lendedFinished" maxWidth="-1.0" minWidth="70.0" prefWidth="-1.0" text="Finished" />
+         </columns>
+      </TableColumn>
+   </columns>
+</TableView>

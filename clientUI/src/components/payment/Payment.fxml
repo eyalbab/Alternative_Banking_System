@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane prefHeight="561.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="components.payment.PaymentController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="NEVER" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="50.0" minHeight="30.0" prefHeight="50.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+      <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="NEVER" />
+   </rowConstraints>
+   <children>
+      <TableView id="BorrowedTable" fx:id="paymentTable" maxHeight="392.0" maxWidth="470.0" minHeight="200.0" minWidth="450.0" prefHeight="392.0" prefWidth="450.0" styleClass="cust-table" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="2" GridPane.rowSpan="5" GridPane.valignment="TOP">
+         <columns>
+            <TableColumn id="loanId" fx:id="payLoanId" prefWidth="72.0" text="Loan Id" />
+            <TableColumn id="loanCategory" fx:id="payLoanCategory" minWidth="5.0" prefWidth="86.0" text="Category" />
+            <TableColumn id="loanAmount" fx:id="payLoanAmount" minWidth="5.0" prefWidth="81.0" text="Amount" />
+            <TableColumn id="loanInterest" fx:id="payLoanInterest" minWidth="5.0" prefWidth="71.0" text="Interest" />
+            <TableColumn id="loanStatus" fx:id="payLoanStatus" minWidth="5.0" prefWidth="106.0" text="Status" />
+         </columns>
+      </TableView>
+      <Label fx:id="BorrowedLabel" text="Borrowed Loans" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label text="Notifications" GridPane.columnIndex="6" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <ListView fx:id="notificationList" prefHeight="364.0" prefWidth="375.0" styleClass="cust-table" GridPane.columnIndex="6" GridPane.columnSpan="4" GridPane.rowIndex="2" GridPane.rowSpan="5" />
+      <AnchorPane prefHeight="90.0" prefWidth="434.0" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7" GridPane.rowSpan="3">
+         <children>
+            <Text fx:id="currentBalance" layoutX="221.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="104.6708984375" />
+            <Label layoutX="29.0" layoutY="24.0" text="Current Balance: " />
+            <Button fx:id="paymentBtn" layoutX="63.0" layoutY="52.0" mnemonicParsing="false" onAction="#handlePayment" text="Payment" />
+            <Button fx:id="closeLoanBtn" layoutX="221.0" layoutY="52.0" mnemonicParsing="false" onAction="#handleCloseLoan" text="Close Loan" />
+         </children>
+      </AnchorPane>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Action Status: " GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.rowIndex="10" />
+      <Text fx:id="statusText" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="7" GridPane.columnSpan="3" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="10.0" />
+         </GridPane.margin>
+      </Text>
+   </children>
+</GridPane>
